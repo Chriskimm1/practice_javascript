@@ -11,6 +11,8 @@ describe('arrays', function() {
   });
 
   it('you should be able to determine the location of an item in an array', function() {
+
+    console.log(arraysAnswers.indexOf(a, 3));
     expect(arraysAnswers.indexOf(a, 3)).to.eql(2);
     expect(arraysAnswers.indexOf(a, 5)).to.eql(-1);
   });
@@ -34,11 +36,13 @@ describe('arrays', function() {
     a.push( 2 );
 
     var result = arraysAnswers.removeWithoutCopy(a, 2);
-
+    console.log(result.length)
+    console.log(result.join(" "))
     expect(result).to.have.length(3);
     expect(result.join(' ')).to.eql('1 3 4');
 
     // make sure that you return the same array instance
+    console.log(result, a);
     expect(result).equal(a);
   });
 

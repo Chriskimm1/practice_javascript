@@ -13,6 +13,8 @@ describe('async behavior', function() {
       if (++finished === total) { _done(); }
     }
 
+
+
     asyncAnswers.async(true).then(function(result) {
       flag = result;
       expect(flag).to.eql(true);
